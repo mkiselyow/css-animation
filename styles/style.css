@@ -1,0 +1,441 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #eee; }
+
+.artboard {
+  width: 800px;
+  height: 600px;
+  background: #f5fafc;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  margin: 50px auto;
+  border: 20px white solid;
+  position: relative; }
+
+.bb8 {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  top: 222px;
+  left: 230px; }
+
+.bb8-body {
+  width: 220px;
+  height: 220px;
+  background: #ebf2fa;
+  position: absolute;
+  border-radius: 50%;
+  border: solid 8px #244356;
+  overflow: hidden;
+  animation: spin 4s linear infinite; }
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border: 8px solid #244356;
+  background-color: #fdc23e;
+  border-radius: 50%;
+  position: absolute; }
+  .circle:after {
+    content: '';
+    display: block;
+    border: 8px solid #244356;
+    background: #ebf2fa;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 50%; }
+
+.circle-1 {
+  top: 10px;
+  left: -30px; }
+
+.circle-2 {
+  top: 123px;
+  left: 80px; }
+
+.circle-3 {
+  height: 300px;
+  width: 300px;
+  left: 120px;
+  top: -180px; }
+
+.dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #244356;
+  position: absolute; }
+
+.dot-1 {
+  top: 75px;
+  left: 113px; }
+
+.dot-2 {
+  top: 145px;
+  left: 40px; }
+
+.line {
+  position: absolute;
+  height: 8px;
+  width: 60px;
+  background: #244356; }
+
+.line-1 {
+  transform: rotate(40deg);
+  top: 53px;
+  left: -57px;
+  width: 50px; }
+
+.line-2 {
+  transform: rotate(165deg);
+  top: -55px;
+  left: -43px; }
+
+.line-3 {
+  transform: rotate(-71deg);
+  top: 32px;
+  left: 38px;
+  width: 50px; }
+
+.body-shadow {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden; }
+  .body-shadow:after {
+    content: '';
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.4);
+    left: -50px;
+    top: -20px;
+    display: block;
+    position: absolute; }
+
+.bb8-head {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: -60px;
+  left: -30px;
+  transform: rotate(-30deg); }
+
+.head-top {
+  width: 160px;
+  height: 160px;
+  background: #ebf2fa;
+  border: solid 8px #244356;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: -10px 0px 0px 4px rgba(0, 0, 0, 0.2) inset; }
+
+.head-top-crop {
+  height: 50%;
+  overflow: hidden;
+  position: relative; }
+
+.head-bottom-base, .head-side-1, .head-side-2 {
+  border-bottom: 8px solid #244356;
+  background: #a7d0e0;
+  height: 20px;
+  position: absolute;
+  border-radius: 0 0 8px 8px; }
+
+.head-bottom {
+  position: absolute;
+  width: 100%;
+  top: 80px; }
+
+.head-bottom-base {
+  width: 80%;
+  left: 10%; }
+
+.head-side-1, .head-side-2 {
+  width: 30px; }
+
+.head-side-1 {
+  transform: rotate(40deg);
+  transform-origin: bottom left;
+  top: -21px;
+  left: -4px; }
+
+.head-side-2 {
+  transform: rotate(-40deg);
+  transform-origin: bottom right;
+  top: -21px;
+  left: 134px; }
+
+.lens {
+  width: 56px;
+  height: 56px;
+  border: solid 8px #244356;
+  border-radius: 50%;
+  background: #295a6d;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -28px;
+  overflow: hidden; }
+  .lens:before, .lens:after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 70px;
+    position: absolute;
+    background: #2a6b80;
+    left: 10px;
+    top: -20px;
+    transform: rotate(40deg); }
+  .lens:after {
+    width: 10px;
+    left: 25px;
+    top: -10px; }
+
+.freckle {
+  height: 13px;
+  width: 13px;
+  background: #244356;
+  top: 60px;
+  left: 120px;
+  position: absolute;
+  border-radius: 50%; }
+
+.speedlines > div {
+  height: 8px;
+  background: #244356;
+  border-radius: 8px;
+  position: absolute; }
+  .speedlines > div.tail:after {
+    content: '';
+    display: block;
+    height: 8px;
+    border-radius: 8px;
+    left: 50px;
+    width: 20px;
+    background: #244356;
+    left: 100%;
+    position: absolute;
+    animation: tail-move infinite  2s ease-in-out; }
+  .speedlines > div.one {
+    top: -60px;
+    left: 56px;
+    width: 55px; }
+  .speedlines > div.two {
+    top: -24px;
+    left: 111px;
+    width: 55px; }
+  .speedlines > div.three {
+    top: -10px;
+    left: 98px;
+    width: 30px; }
+  .speedlines > div.four {
+    top: 114px;
+    left: 199px;
+    width: 35px; }
+  .speedlines > div.five {
+    top: 132px;
+    left: 210px;
+    width: 35px; }
+
+.sparkles > div {
+  position: absolute;
+  width: 20px;
+  height: 8px;
+  border-radius: 8px;
+  background: red;
+  animation: glow 2s infinite ease-in-out; }
+  .sparkles > div:after {
+    content: '';
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    width: 100%;
+    background: inherit;
+    position: absolute;
+    transform: rotate(90deg); }
+  .sparkles > div.small {
+    width: 10px;
+    height: 4px; }
+  .sparkles > div.mid {
+    width: 15px;
+    height: 5px; }
+  .sparkles > div.large {
+    width: 20px;
+    height: 7px; }
+  .sparkles > div.one {
+    top: -41px;
+    left: 146px;
+    width: 15px;
+    background-color: #ff7761;
+    animation: glow 2s 300ms infinite ease-in-out; }
+  .sparkles > div.two {
+    top: -33px;
+    left: 224px;
+    background-color: #449baa;
+    animation: glow 2s 900ms infinite ease-in-out; }
+  .sparkles > div.three {
+    top: 4px;
+    left: 183px;
+    background-color: #449baa;
+    animation: glow 2s 600ms infinite ease-in-out; }
+  .sparkles > div.four {
+    top: -10px;
+    left: 275px;
+    background-color: #fdc23e;
+    animation: glow 2s 300ms infinite ease-in-out; }
+  .sparkles > div.five {
+    top: 49px;
+    left: 224px;
+    background-color: #fdc23e;
+    animation: glow 2s 600ms infinite ease-in-out; }
+  .sparkles > div.six {
+    top: 101px;
+    left: 263px;
+    background-color: #449baa;
+    animation: glow 2s 300ms infinite ease-in-out; }
+  .sparkles > div.seven {
+    top: 168px;
+    left: 241px;
+    background-color: #449baa;
+    animation: glow 2s 600ms infinite ease-in-out; }
+  .sparkles > div.eight {
+    top: 181px;
+    left: 294px;
+    background-color: #ff7761;
+    animation: glow 2s 300ms infinite ease-in-out; }
+  .sparkles > div.nine {
+    top: 200px;
+    left: 194px;
+    background-color: #ff7761;
+    animation: glow 2s 600ms infinite ease-in-out; }
+  .sparkles > div.ten {
+    top: 68px;
+    left: 310px;
+    background-color: #ff7761;
+    animation: glow 2s 300ms infinite ease-in-out; }
+  .sparkles > div.elewen {
+    top: 30px;
+    left: 355px;
+    background-color: #ff7761;
+    animation: glow 2s 900ms infinite ease-in-out; }
+  .sparkles > div.twelve {
+    top: 38px;
+    left: 413px;
+    background-color: #fdc23e;
+    animation: glow 2s 300ms infinite ease-in-out; }
+  .sparkles > div.therteen {
+    top: 90px;
+    left: 384px;
+    background-color: #fdc23e;
+    animation: glow 2s 900ms infinite ease-in-out; }
+  .sparkles > div.fourteen {
+    top: 138px;
+    left: 367px;
+    background-color: #ff7761;
+    animation: glow 2s 900ms infinite ease-in-out; }
+  .sparkles > div.fifteen {
+    top: 144px;
+    left: 313px;
+    background-color: #fdc23e;
+    animation: glow 2s 600ms infinite ease-in-out; }
+  .sparkles > div.sixteen {
+    top: 99px;
+    left: 458px;
+    background-color: #ff7761;
+    animation: glow 2s 900ms infinite ease-in-out; }
+
+.ground > div {
+  height: 8px;
+  width: 50px;
+  background-color: #244356;
+  position: absolute;
+  border-radius: 8px; }
+  .ground > div.tail:after {
+    content: '';
+    width: 30%;
+    height: inherit;
+    background-color: inherit;
+    border-radius: inherit;
+    margin-left: 120%;
+    display: block;
+    position: absolute;
+    top: 0; }
+  .ground > div.one {
+    top: 212px;
+    left: -39px;
+    width: 335px; }
+  .ground > div.two {
+    top: 212px;
+    left: -167px;
+    width: 75px; }
+  .ground > div.three {
+    top: 212px;
+    left: 311px;
+    width: 85px; }
+  .ground > div.four {
+    top: 262px;
+    left: -57px;
+    width: 85px; }
+  .ground > div.five {
+    top: 262px;
+    left: 105px;
+    width: 120px; }
+  .ground > div.six {
+    top: 305px;
+    left: 24px;
+    width: 100px; }
+
+.bump {
+  height: 15px;
+  width: 32px;
+  position: absolute;
+  top: -7px;
+  overflow: hidden;
+  left: 0;
+  animation: bump-move 2s infinite ease-in-out; }
+  .bump:before {
+    content: '';
+    display: block;
+    height: 25px;
+    width: 25px;
+    border: 8px solid #244356;
+    border-radius: 50%;
+    background-color: #f5fafc; }
+
+@keyframes bump-move {
+  from {
+    left: 0; }
+  to {
+    left: 80%; } }
+@keyframes tail-move {
+  from {
+    left: 110%; }
+  to {
+    left: 140%; } }
+@keyframes spin {
+  from {
+    transform: rotate(360deg); }
+  to {
+    transform: rotate(0deg); } }
+@keyframes glow {
+  from {
+    transform: scale(1); }
+  90% {
+    transform: scale(0.4); }
+  to {
+    transform: scale(1); } }
+
+/*# sourceMappingURL=style.css.map */
